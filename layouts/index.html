@@ -6,10 +6,20 @@
 
         <h1>{{ .Site.Title }}</h1>
 
-        <h2>{{ markdownify .Site.Params.Description }}</h2>
-
+        <h2>{{ markdownify .Site.Params.Description }}</h2> 
+    </br>
+        
+                    <snap style="color:rgb(189, 189, 189)"><h5>last post</h5></snap>
+                    <h5>
+                        {{ $mysection := ($.Site.GetPage "section" .Section).Pages }}
+                        {{ range first 1 $mysection }}
+                          <a href="{{ .RelPermalink }}">{{.Title}}</a>
+                        {{ end }}
+                    </h5> 
+        
     </div>
 
+    
 </main>
 
 {{ partial "footer" . }}
