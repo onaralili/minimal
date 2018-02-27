@@ -11,7 +11,7 @@
         
                     <snap style="color:rgb(189, 189, 189)"><h5>last post</h5></snap>
                     <h5>
-                        {{ $mysection := ($.Site.GetPage "section" .Section).Pages }}
+                        {{ $mysection := ($.Site.GetPage "section" "posts").Pages.ByPublishDate.Reverse}}
                         {{ range first 1 $mysection }}
                           <a href="{{ .RelPermalink }}">{{.Title}}</a>
                         {{ end }}
