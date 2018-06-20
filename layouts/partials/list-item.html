@@ -16,7 +16,7 @@
     {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
     {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
 
-    {{ if eq .Scratch.Kind "Projects" }} 
+    {{ if eq $.Scratch.Kind "Projects" }} 
      <h4><a href="{{ .Params.repo }}">{{ .Title }}</a></h4> 
     {{else}}
       <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h4>
