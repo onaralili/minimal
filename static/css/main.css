@@ -17,7 +17,10 @@ main {
 }
 
 /*home page*/
-
+.hireme a {
+    border-bottom-style: dotted;
+    border-bottom-color:red;
+}
 .intro {
     /* margin: 20vh 0; */
     transform: translateY(22vh);
@@ -25,7 +28,7 @@ main {
 
 .intro > h1 {
     color: #212121;
-    font-size: 12vh;
+    font-size: 7vh;
 }
 
 .intro > h2 {
