@@ -21,6 +21,12 @@ main {
     border-bottom-style: dotted;
     border-bottom-color:red;
 }
+
+p {
+    font-size: large;
+    line-height: 1.7em;
+}
+
 .intro {
     /* margin: 20vh 0; */
     transform: translateY(22vh);
